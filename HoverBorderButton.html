@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Simple Tutorials</title>
+  </head>
+  <body>
+    <a href="https://www.youtube.com/channel/UCr543ouui9QkNH81C3JsBww">
+      <span></span><span></span><span></span><span></span>
+      Simple Tutorials
+    </a>
+  </body>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+    body{
+      background: #111;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a{
+      position: relative;
+      color: white;
+      text-decoration: none;
+      font-family: 'Poppins';
+      font-size: 20px;
+      padding: 20px 30px;
+      border: 3px solid rgb(61, 15, 141);
+      overflow: hidden;
+    }
+    a:hover {
+      background: rgb(61, 15, 141);
+      box-shadow: 0px 0px 80px 3px rgb(70, 23, 151);
+      transition-delay:1s ;
+    }
+    a span{
+      position: absolute;
+    }
+    a span:nth-child(1){
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg,rgba(61, 15, 141,0.1),rgb(103, 34, 224));
+    }
+    a:hover span:nth-child(1){
+      left: 100%;
+      transition: 0.5s;
+
+    }
+    a span:nth-child(2){
+      top: -100%;
+      right: 0%;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(rgba(61, 15, 141,0.1),rgb(103, 34, 224));
+    }
+    a:hover span:nth-child(2){
+      top: 100%;
+      transition: 0.5s 0.25s;
+    }
+    a span:nth-child(3){
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(-90deg,rgba(61, 15, 141,0.1),rgb(103, 34, 224));
+    }
+    a:hover span:nth-child(3){
+      right: 100%;
+      transition: 0.5s 0.5s;
+
+    }
+    a span:nth-child(4){
+      bottom: -100%;
+      left: 0%;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(180deg,rgba(61, 15, 141,0.1),rgb(103, 34, 224));
+    }
+    a:hover span:nth-child(4){
+      bottom: 100%;
+      transition: 0.5s 0.75s;
+    }
+  </style>
+</html>
