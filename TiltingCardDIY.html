@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Tutorials</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            background: #222;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 500px;
+            height: 400px;
+            background: url("./Assets/mountain.jpg") no-repeat center;
+            background-size: cover;
+            border-radius: 40px;
+            transform-style: preserve-3d;
+            transition: 0.1s;
+
+        }
+        .card-content{
+            width: 100%;
+            height: 100%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 40px;
+            transform: translateZ(10px);}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h1>Let Yourself Sway</h1>
+        </div>
+    </div>
+    <script>
+        const card = document.getElementsByClassName("card")[0]
+        card.addEventListener("mouseover",()=>{
+            card.addEventListener("mousemove",(e)=>{
+                const x = window.innerWidth/2 - e.x
+                const y = window.innerHeight/2 - e.y
+                console.log(x,y)
+                const sensitivity = 0.1;
+                const sensiX = sensitivity*4/5
+                const sensiY = sensitivity*1
+                card.style.transform = `rotateX(${-sensiX*y}deg) rotateY(${-sensiY*x}deg)`
+            })
+            card.addEventListener("mouseout",()=>{
+                card.style.transform = "rotateX(0) rotateY(0)"
+            })
+        })
+    </script>
+</body>
+</html>
